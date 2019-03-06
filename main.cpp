@@ -17,7 +17,7 @@ int main(){
 	cout << "Others = ";
 	cin >> others;
 	answer = privileges(author,group,others);
-	
+
 	if(answer < 100)
 		cout << "0";
 	if(answer < 10)
@@ -55,5 +55,5 @@ return final;
 
 
 void errMsg(const char &a){
-	if (a != '-') cerr << "Wrong format!" << endl; 
+	if (a != '-' && a != 'r' && a != 'w' && a != 'x') cerr << "Wrong format with " << a  << endl; 
 }
